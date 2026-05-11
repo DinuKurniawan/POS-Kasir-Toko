@@ -99,18 +99,12 @@ Set Environment Variables berikut pada Project Vercel (Production):
 ```env
 APP_KEY=base64:...
 APP_URL=https://<domain-vercel-anda>
-DB_CONNECTION=mysql
-DB_HOST=<host-mysql-publik>
-DB_PORT=3306
-DB_DATABASE=<nama_db>
-DB_USERNAME=<user_db>
-DB_PASSWORD=<password_db>
 MIDTRANS_SERVER_KEY=SB-Mid-server-...
 MIDTRANS_CLIENT_KEY=SB-Mid-client-...
 MIDTRANS_IS_PRODUCTION=false
 ```
 
-> Catatan: `DB_HOST=127.0.0.1` tidak bisa dipakai di Vercel. Gunakan database MySQL yang bisa diakses publik.
+Konfigurasi deploy ini default ke SQLite runtime (`/tmp/pos-kasir-toko.sqlite`) yang otomatis di-seed saat build.
 
 ## Akun Default
 
