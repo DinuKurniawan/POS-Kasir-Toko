@@ -17,6 +17,14 @@
             "dest": "/public/build/$1"
         },
         {
+            "src": "/favicon.ico",
+            "dest": "/public/favicon.ico"
+        },
+        {
+            "src": "/robots.txt",
+            "dest": "/public/robots.txt"
+        },
+        {
             "src": "/(.*\\.(?:css|js|mjs|map|json|jpg|jpeg|png|gif|svg|webp|avif|ico|txt|xml|woff|woff2|ttf|eot))",
             "dest": "/public/$1"
         },
@@ -28,16 +36,28 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
+        "APP_LOCALE": "id",
+        "APP_FALLBACK_LOCALE": "en",
         "LOG_CHANNEL": "stderr",
+        "LOG_LEVEL": "error",
+        "LOG_STDERR_FORMATTER": "Monolog\\Formatter\\JsonFormatter",
+        "DB_CONNECTION": "sqlite",
+        "DB_DATABASE": "/tmp/pos-kasir-toko.sqlite",
+        "DB_FOREIGN_KEYS": "true",
         "CACHE_STORE": "array",
         "SESSION_DRIVER": "cookie",
+        "SESSION_LIFETIME": "120",
         "SESSION_SECURE_COOKIE": "true",
+        "SESSION_SAME_SITE": "lax",
         "QUEUE_CONNECTION": "sync",
+        "BROADCAST_CONNECTION": "log",
+        "MAIL_MAILER": "log",
+        "FILESYSTEM_DISK": "local",
         "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
-        "APP_CONFIG_CACHE": "/tmp/storage/framework/cache/config.php",
-        "APP_EVENTS_CACHE": "/tmp/storage/framework/cache/events.php",
+        "APP_SERVICES_CACHE": "/tmp/storage/framework/cache/services.php",
         "APP_PACKAGES_CACHE": "/tmp/storage/framework/cache/packages.php",
+        "APP_CONFIG_CACHE": "/tmp/storage/framework/cache/config.php",
         "APP_ROUTES_CACHE": "/tmp/storage/framework/cache/routes.php",
-        "APP_SERVICES_CACHE": "/tmp/storage/framework/cache/services.php"
+        "APP_EVENTS_CACHE": "/tmp/storage/framework/cache/events.php"
     }
 }
